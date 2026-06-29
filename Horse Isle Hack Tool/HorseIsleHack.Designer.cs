@@ -47,7 +47,10 @@
             this.hackProgress = new System.Windows.Forms.ProgressBar();
             this.removeSelected = new System.Windows.Forms.Button();
             this.loginButton = new System.Windows.Forms.Button();
+            this.portEntry = new System.Windows.Forms.NumericUpDown();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.count)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.portEntry)).BeginInit();
             this.SuspendLayout();
             // 
             // hackItNow
@@ -93,7 +96,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(179, 15);
+            this.label2.Location = new System.Drawing.Point(324, 15);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(58, 13);
             this.label2.TabIndex = 4;
@@ -101,14 +104,14 @@
             // 
             // usernameEntry
             // 
-            this.usernameEntry.Location = new System.Drawing.Point(243, 12);
+            this.usernameEntry.Location = new System.Drawing.Point(388, 12);
             this.usernameEntry.Name = "usernameEntry";
             this.usernameEntry.Size = new System.Drawing.Size(133, 20);
             this.usernameEntry.TabIndex = 5;
             // 
             // passwordEntry
             // 
-            this.passwordEntry.Location = new System.Drawing.Point(444, 12);
+            this.passwordEntry.Location = new System.Drawing.Point(589, 12);
             this.passwordEntry.Name = "passwordEntry";
             this.passwordEntry.PasswordChar = '*';
             this.passwordEntry.Size = new System.Drawing.Size(157, 20);
@@ -117,7 +120,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(382, 15);
+            this.label3.Location = new System.Drawing.Point(527, 15);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(56, 13);
             this.label3.TabIndex = 7;
@@ -127,7 +130,7 @@
             // 
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(759, 9);
+            this.label4.Location = new System.Drawing.Point(758, 36);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(164, 13);
             this.label4.TabIndex = 8;
@@ -243,7 +246,7 @@
             // 
             // loginButton
             // 
-            this.loginButton.Location = new System.Drawing.Point(607, 10);
+            this.loginButton.Location = new System.Drawing.Point(752, 10);
             this.loginButton.Name = "loginButton";
             this.loginButton.Size = new System.Drawing.Size(56, 23);
             this.loginButton.TabIndex = 19;
@@ -251,11 +254,39 @@
             this.loginButton.UseVisualStyleBackColor = true;
             this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
             // 
+            // portEntry
+            // 
+            this.portEntry.Location = new System.Drawing.Point(211, 13);
+            this.portEntry.Maximum = new decimal(new int[] {
+            65535,
+            0,
+            0,
+            0});
+            this.portEntry.Name = "portEntry";
+            this.portEntry.Size = new System.Drawing.Size(107, 20);
+            this.portEntry.TabIndex = 20;
+            this.portEntry.Value = new decimal(new int[] {
+            443,
+            0,
+            0,
+            0});
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(179, 15);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(29, 13);
+            this.label8.TabIndex = 21;
+            this.label8.Text = "Port:";
+            // 
             // hi1HackTool
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(931, 724);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.portEntry);
             this.Controls.Add(this.loginButton);
             this.Controls.Add(this.removeSelected);
             this.Controls.Add(this.hackProgress);
@@ -279,6 +310,7 @@
             this.Text = "Horse Isle Hack T00L";
             this.Load += new System.EventHandler(this.hi1HackTool_Load);
             ((System.ComponentModel.ISupportInitialize)(this.count)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.portEntry)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -305,6 +337,8 @@
         private System.Windows.Forms.ProgressBar hackProgress;
         private System.Windows.Forms.Button removeSelected;
         private System.Windows.Forms.Button loginButton;
+        private System.Windows.Forms.NumericUpDown portEntry;
+        private System.Windows.Forms.Label label8;
     }
 }
 

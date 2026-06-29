@@ -368,6 +368,7 @@ namespace Horse_Isle_Hack_Tool
         private void loginButton_Click(object sender, EventArgs e)
         {
             string server = serverEntry.Text;
+            UInt16 port = Convert.ToUInt16(portEntry.Value);
             string username = usernameEntry.Text;
             string password = passwordEntry.Text;
 
@@ -382,16 +383,16 @@ namespace Horse_Isle_Hack_Tool
 
             // Inital handshake
             Socket hi1Server = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-            hi1Server.Connect(server, 443);
+            hi1Server.Connect(server, port);
             connectionOuput.AppendText("Connected to: " + hi1Server.RemoteEndPoint + "\r\n");
             connectionOuput.AppendText("Sending policy file request...\r\n");
             connectionOuput.AppendText("Server responded!\r\n");
             hi1Server.Close();
 
-            // Now acturally log in
+            // Now actually log in
 
             HI1GameServer = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-            HI1GameServer.Connect(server, 443);
+            HI1GameServer.Connect(server, port);
             connectionOuput.AppendText("Connected to: " + HI1GameServer.RemoteEndPoint + "\r\n");
             connectionOuput.AppendText("Generating login request!\r\n");
             sendData(HI1GameServer, generateLoginRequest(username, password));
