@@ -308,6 +308,7 @@
             this.Controls.Add(this.hackItNow);
             this.Name = "hi1HackTool";
             this.Text = "Horse Isle Hack T00L";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.hi1HackTool_FormClosing);
             this.Load += new System.EventHandler(this.hi1HackTool_Load);
             ((System.ComponentModel.ISupportInitialize)(this.count)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.portEntry)).EndInit();

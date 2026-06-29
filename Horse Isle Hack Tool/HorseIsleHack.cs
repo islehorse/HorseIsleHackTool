@@ -1,6 +1,7 @@
 ﻿using Horse_Isle_Hack_Tool.Properties;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Net.Sockets;
 using System.Text;
@@ -428,6 +429,11 @@ namespace Horse_Isle_Hack_Tool
                 return;
             }
 
+        }
+
+        private void hi1HackTool_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Process.GetCurrentProcess().Kill();
         }
     }
 }
